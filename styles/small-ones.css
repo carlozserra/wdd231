@@ -1,0 +1,225 @@
+:root {
+    --font-primary: "PT Sans", sans-serif;
+    --primary-color: #08456d;
+    --secondary-color: #fff;
+    --third-color: #2c2b2b;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+body {
+    width: 70vh;
+    margin: 0 auto;
+}
+
+/*Profile name and image----------------------------------*/
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre a imagem e o nome */
+    padding: 10px;
+}
+
+.profile-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-container h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+/* navigation ----------------------------------*/
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+
+/*hamburguer button----------------------------------*/
+
+.menu-toggle {
+    color: var(--secondary-color);
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+
+}
+
+nav ul {
+    display: none;
+    /* Esconde o menu */
+}
+
+nav ul.active {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /* Mostra o menu quando a classe "active" é adicionada */
+}
+
+
+/*Main*/
+main {
+    text-align: center;
+    margin: 30px;
+
+}
+
+main h1 {
+
+    text-align: left;
+    color: var(--primary-color);
+}
+
+/*1,2,3 Sections h2 title------------------------------*/
+.sec1 h2,
+.sec2 h2,
+.sec3 h2 {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+}
+
+/* 1 section dots---------------*/
+.sec1 ul {
+    list-style-type: disc;
+    padding-left: 70px;
+    color: var(--third-color);
+}
+
+/* 2sec container---------------------------------------*/
+.sec2 {
+    border-radius: 8px;
+    color: var(--secondary-color);
+}
+
+/* 2 SEC IMAGEM*/
+.sec2 img {
+
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/*sec2 p */
+
+.sec2 p {
+    margin: 5px;
+    color: black;
+}
+
+/*Sec3 CONTAINER-------------------------------------------*/
+.sec3 {
+    border-radius: 8px;
+    color: var(--secondary-color);
+}
+
+/* Sec3 FILTERS WDD, CSE ETC */
+.filters button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 12%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px auto;
+    margin-bottom: 2px;
+
+}
+
+/*sec3 just a line*/
+.separator {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 10px auto;
+    justify-content: center;
+    width: 100%;
+}
+
+/*sec3 courses container */
+.courses {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.wdd,
+.cse {
+    background-color: #69331c;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+.other {
+    background-color: #878585;
+    color: var(--third-color);
+    width: 150px;
+    padding: 10px;
+    border: solid 1px var(--third-color);
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+/*footer-----------*/
+
+footer {
+
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#lastModified {
+    font-weight: 1000;
+    color: yellow;
+}
+
+.creditsT {
+    padding: 10px;
+    color: var(--primary-color);
+}

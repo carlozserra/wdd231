@@ -1,25 +1,79 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Inicio</title>
     <meta name="description" content="Carlos Henrique Serra">
     <meta name="author" content="Carlos Serra">
-    <link rel="stylesheet" href="styles/filename.css">
-    <script src="scripts/name.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small-ones.css">
+    <link rel="stylesheet" href="styles/larger-ones.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Golos+Text:wght@400..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script src="scripts/char.js" defer></script>
+
 </head>
+
 <body>
     <header>
+        <div class="profile-container">
+            <img src="images/profile.png" alt="profile picture">
+            <h1>Carlos Henrique Serra</h1>
+        </div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰ <!-- Ícone do menu hambúrguer -->
+            </div>
+            <ul id="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <h1>Carlos Serra</h1>
-            <p>styles/filename.css</p>
+
+        <h1>Home</h1>
+
+        <section class="sec1">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section class="sec2">
+            <h2>Bahia,Brazil</h2>
+            <img src="images/profile.png" alt="bahia, Brazil">
+            <p>Bahia, brazil</p>
+        </section>
+
+        <section class="sec3">
+            <h2>Web and Computer Programming Certificate</h2>
+
+            <div class="filters">
+                <button id="filter-all">All</button>
+                <button id="filter-cse">CSE</button>
+                <button id="filter-wdd">WDD</button>
+            </div>
+
+            <hr class="separator">
+
+            <p id="total-credits" class="creditsT"><strong>Total Credits:</strong> 0</p>
+            <ul id="courseList" class="courses"></ul>
+
         </section>
     </main>
     <footer>
-        <p>&copy; scripts/name.js Your Company</p>
+        <p>&copy; <span id="currentYear"></span> 💥Carlos Serra💥</p>
+        <p id="lastModified">Carlos Serra, Brazil</p>
     </footer>
 </body>
+
 </html>
