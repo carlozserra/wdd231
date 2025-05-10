@@ -1,0 +1,74 @@
+
+/* Tudo o que está aqui dentro só será aplicado a partir de 768px */
+@media screen and (min-width: 768px) {
+    
+    body {
+        max-width: auto;
+        width: 60%;
+        margin: auto;
+    }
+
+    
+    /* navigation ----------------------------------*/
+    nav ul {
+        display: flex;
+        justify-content: row;
+        gap: 30px;
+        list-style: none;
+    }
+    
+    nav ul.active {
+        /* Removendo o comportamento mobile */
+        flex-direction: row !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+  
+    .menu-toggle {
+      display: none;
+    }
+    
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+
+    .sec1, .sec2, .sec3 {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+
+    .courses {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .sec3 {   
+        grid-column: 1 / -1; /* Faz a última seção ocupar as duas colunas */
+    }
+
+    .wdd,.cse {
+    grid-template-columns: 2fr 2fr;   
+    background-color: #69331c;
+    
+    width: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 40%;
+
+}
+    footer {
+        justify-content: space-around;
+        padding: 20px 40px;
+    }
+}

@@ -33,19 +33,13 @@ function renderCourses(courseArray) {
 
         li.innerHTML = `
         <h3>${course.subject} ${course.number} - ${course.title}</h3>
-        <p><strong>Credits:</strong> ${course.credits}</p>
-        <p><strong>Description:</strong> ${course.description}</p>
-        <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
-        <p class="status">${course.completed ? '✅ Completed' : '⏳ In Progress'}</p>`;
+        <p class="status">${course.completed ? '✅ Completed' : ''}</p>`;
         courseList.appendChild(li);
 
         totalCreditsElement.innerHTML = `<strong>Total Credits:</strong> ${totalCredits}`;
     });
 
-
 }
-
-
 
 
 // Filter handlers

@@ -5,8 +5,6 @@
     --third-color: #2c2b2b;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +44,7 @@ body {
 
 /* navigation ----------------------------------*/
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
     padding: 10px;
 }
 
@@ -93,8 +91,6 @@ nav ul.active {
 /*Main*/
 main {
     text-align: center;
-    margin: 30px;
-
 }
 
 main h1 {
@@ -178,15 +174,16 @@ main h1 {
     align-items: center;
     gap: 10px;
 
+
 }
 
 .wdd,
 .cse {
     background-color: #69331c;
-    width: 150px;
+    width: 10px;
     padding: 10px;
     border-radius: 8px;
-    width: 100%;
+    width: 80%;
 
 }
 
