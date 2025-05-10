@@ -25,7 +25,7 @@ body {
     background-color: var(--primary-color);
     align-items: center;
     gap: 10px;
-    /* Espaço entre a imagem e o nome */
+    /* space between name and img */
     padding: 10px;
 }
 
@@ -77,14 +77,14 @@ nav a:hover {
 
 nav ul {
     display: none;
-    /* Esconde o menu */
+    /* hide menu */
 }
 
 nav ul.active {
     flex-direction: column;
     display: flex;
     align-items: center;
-    /* Mostra o menu quando a classe "active" é adicionada */
+    /* Show menu when "active" class is added*/
 }
 
 
