@@ -1,0 +1,37 @@
+{
+    "New Ward Member": [
+        {
+            "familyName": "Serra",
+            "movedIntoTheWard": "14/10/2016",
+            "familyMembers": 5,
+            "visitCheck": true,
+            "individualFamilyData": [
+                {
+                    "name": "Carlos",
+                    "gender": "Male",
+                    "birthDate": "14/10/2001"
+                },
+                {
+                    "name": "Nicolas",
+                    "gender": "Male",
+                    "birthDate": "30/11/2008"
+                },
+                {
+                    "name": "Heitor",
+                    "gender": "Male",
+                    "birthDate": "18/01/2014"
+                },
+                {
+                    "name": "Mauricio",
+                    "gender": "Male",
+                    "birthDate": "18/03/1999"
+                },
+                {
+                    "name": "Vanuza",
+                    "gender": "Female",
+                    "birthDate": "26/04/1988"
+                }
+            ]
+        }
+    ]
+}

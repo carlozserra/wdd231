@@ -1,0 +1,36 @@
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    width: 75%;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background-color: rgb(172, 166, 177);
+    margin: 1px;
+    border: 2px solid rgb(62, 0, 128);
+    
+}
+
+img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    
+    margin: 10px;
+    text-align: center;
+    color: rgb(30, 30, 114);
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
