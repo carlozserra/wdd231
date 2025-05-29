@@ -1,6 +1,8 @@
 
 document.getElementById("menu-toggle").addEventListener("click", function () {
-document.getElementById("nav-list").classList.toggle("active");
+    document.getElementById("animateme").classList.toggle("active");
+    document.getElementById("menu-toggle").classList.toggle("open");
+
 });
 
 

@@ -1,7 +1,6 @@
-
 /* Tudo o que está aqui dentro só será aplicado a partir de 768px */
 @media screen and (min-width: 768px) {
-    
+
     body {
 
         width: 60%;
@@ -9,23 +8,29 @@
     }
 
     /* navigation ----------------------------------*/
+    nav {
+        grid-template-rows: 1fr;
+    }
+
     nav ul {
         display: flex;
+        justify-content: center;
         gap: 30px;
         list-style: none;
+
     }
-    
+
     nav ul.active {
         /* Removendo o comportamento mobile */
         flex-direction: row !important;
         display: flex !important;
         align-items: center !important;
-      }
-  
-    .menu-toggle {
-      display: none;
     }
-    
+
+    .menu-toggle {
+        display: none;
+    }
+
 
     main {
         display: grid;
@@ -37,7 +42,9 @@
         grid-column: 1 / -1;
     }
 
-    .sec1, .sec2, .sec3 {
+    .sec1,
+    .sec2,
+    .sec3 {
         background-color: #f8f8f8;
         padding: 20px;
         border-radius: 10px;
@@ -50,21 +57,24 @@
         flex-wrap: wrap;
         gap: 10px;
     }
-    
-    .sec3 {   
-        grid-column: 1 / -1; /* Faz a última seção ocupar as duas colunas */
+
+    .sec3 {
+        grid-column: 1 / -1;
+        /* Faz a última seção ocupar as duas colunas */
     }
 
-    .wdd,.cse {
-    grid-template-columns: 2fr 2fr;   
-    background-color: #69331c;
-    
-    width: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    width: 40%;
+    .wdd,
+    .cse {
+        grid-template-columns: 2fr 2fr;
+        background-color: #69331c;
 
-}
+        width: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        width: 40%;
+
+    }
+
     footer {
         justify-content: space-around;
         padding: 20px 40px;
