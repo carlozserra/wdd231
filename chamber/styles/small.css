@@ -1,0 +1,111 @@
+@media screen and (max-width: 900px) and (min-width: 320px) {
+
+    /* já existente para o botão hamburger */
+    #hamButton::before {
+        content: "\2630";
+    }
+
+    #hamButton.open::before {
+        content: "X";
+    }
+
+    #hamButton {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--secondary-color);
+        cursor: pointer;
+    }
+
+
+
+    /*NAVIGATION =========================*/
+    nav {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+        
+    }
+    nav ul {
+        overflow: hidden;
+        display: block;
+    
+    }
+    nav.open {
+    
+        grid-template-rows: 1fr;
+    }
+
+
+    /* Home Page ======================= */
+    .hero img {
+        height: auto;
+        /* altura flexível no mobile */
+    }
+
+    .hero {
+        display: block;
+        max-width: 100%;
+    }
+
+    .cta-button {
+        top: 60%;
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* CURRENT SECTION ======================= */
+    #current {
+        grid-template-columns: 1fr;
+        /* de 3 colunas para 1 */
+    }
+
+    /* SPOTLIGHTS ======================= */
+    .spotlight-container {
+        grid-template-columns: 1fr;
+        /* stack em vez de 3 colunas */
+    }
+
+    .spotlight-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spotlight-body img {
+        width: 30%;
+        height: auto;
+    }
+
+    .spotlights h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* WEATHER ======================= */
+    .weather p,
+    .weather #current-temp {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .weather #weather-icon {
+        width: 3rem;
+    }
+
+    /* FORECAST ======================= */
+    #forecast,
+    .forecast p {
+        font-size: 1.2rem;
+        margin: 5px 10px;
+    }
+}

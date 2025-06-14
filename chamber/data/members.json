@@ -1,0 +1,67 @@
+{
+  "companies": [
+    {
+      "name": "Church of Jesus Christ",
+      "address": "124 Av Street 450",
+      "phoneNumber": "(535) 2323-4242",
+      "websiteUrl": "https://churchofjesuschrist.org",
+      "img": "https://yt3.googleusercontent.com/OquXeXqtZ3vHPkxEUMK-FkrJBB8ySVz72gmgjXtB-ranh8vGtAncYfWnDysGgaBbY6GFQNzNeGs=s160-c-k-c0x00ffffff-no-rj",
+      "memberLevel": "gold",
+      "otherInfo": "Religious organization"
+    },
+    {
+      "name": "Google",
+      "address": "1600 Amphitheatre Parkway, Mountain View, CA",
+      "phoneNumber": "(650) 253-0000",
+      "websiteUrl": "https://www.google.com",
+      "img": "https://pngimg.com/uploads/google/google_PNG19644.png",
+      "memberLevel": "silver",
+      "otherInfo": "Search engine and tech company"
+    },
+    {
+      "name": "Amazon",
+      "address": "410 Terry Ave N, Seattle, WA",
+      "phoneNumber": "(206) 266-1000",
+      "websiteUrl": "https://www.amazon.com",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/905px-Amazon_logo.svg.png",
+      "memberLevel": "silver",
+      "otherInfo": "E-commerce and cloud computing"
+    },
+    {
+      "name": "Microsoft",
+      "address": "1 Microsoft Way, Redmond, WA",
+      "phoneNumber": "(425) 882-8080",
+      "websiteUrl": "https://www.microsoft.com",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      "memberLevel": "gold",
+      "otherInfo": "Software and technology company"
+    },
+    {
+      "name": "Apple Inc.",
+      "address": "One Apple Park Way, Cupertino, CA",
+      "phoneNumber": "(408) 996–1010",
+      "websiteUrl": "https://www.apple.com",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+      "memberLevel": "gold",
+      "otherInfo": "Consumer electronics and software"
+    },
+    {
+      "name": "Tesla, Inc.",
+      "address": "3500 Deer Creek Road, Palo Alto, CA",
+      "phoneNumber": "(650) 681-5000",
+      "websiteUrl": "https://www.tesla.com",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg",
+      "memberLevel": "member",
+      "otherInfo": "Electric cars and energy solutions"
+    },
+    {
+      "name": "Coca-Cola Company",
+      "address": "One Coca-Cola Plaza, Atlanta, GA",
+      "phoneNumber": "(404) 676-2121",
+      "websiteUrl": "https://www.coca-colacompany.com",
+      "img": "https://pngimg.com/uploads/cocacola_logo/cocacola_logo_PNG5.png",
+      "memberLevel": "member",
+      "otherInfo": "Beverage corporation"
+    }
+  ]
+}

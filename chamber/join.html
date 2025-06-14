@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Timbuktu Chamber of Commerce">
+    <meta name="author" content="Carlos Serra">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <!-- No final do body de join.html e thankyou.html -->
+    <script type="module" src="scripts/index.mjs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Meta TAGS -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <!--Icon-->
+    <link rel="icon" href="">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/profile.png" alt="logo" width="70px" height="auto">
+            <h1>Timbuktu</h1>
+            <p>Chamber of Commerce</p>
+            <button id="hamButton"></button>
+        </div>
+    </header>
+    <nav id="animated">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Directory</a></li>
+            <li><a href="">Join</a></li>
+            <li><a href="">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Membership Application</legend>
+
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" required title="Enter your first name"
+                        autocomplete="given-name" />
+                </label>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" required title="Enter your last name"
+                        autocomplete="family-name" />
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" name="orgTitle" title="Your role in the organization"
+                        autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
+                </label>
+
+                <label>
+                    Email:
+                    <input type="email" name="email" required title="Valid email required" autocomplete="email"
+                        placeholder="example@email.com" />
+                </label>
+
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" required title="Enter mobile number" autocomplete="tel" />
+                </label>
+
+                <label>
+                    Organization Name:
+                    <input type="text" name="orgName" required title="Business or organization name"
+                        autocomplete="organization" />
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membership" required>
+                        <option value="">-- Select a Level --</option>
+                        <option value="np">NP Membership (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Organization Description:
+                    <textarea name="orgDesc" title="Describe your organization"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp" />
+                <input type="submit" value="Submit Membership Request" />
+            </fieldset>
+        </form>
+
+        <section class="membership-cards">
+            <div class="membership-card" id="np-card">
+                <h3>NP Membership</h3>
+                <button class="see-benefits" data-modal="npModal">See Benefits</button>
+            </div>
+            <div class="membership-card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <button class="see-benefits" data-modal="bronzeModal">See Benefits</button>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <button class="see-benefits" data-modal="silverModal">See Benefits</button>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <button class="see-benefits" data-modal="goldModal">See Benefits</button>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <dialog id="npModal">
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No fees</li>
+                <li>Access to community events</li>
+            </ul>
+            <button class="close-modal" data-modal="npModal">Close</button>
+        </dialog>
+        <dialog id="bronzeModal">
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Event Access</li>
+                <li>Newsletter</li>
+                <li>Basic Advertising</li>
+            </ul>
+            <button class="close-modal" data-modal="bronzeModal">Close</button>
+        </dialog>
+        <dialog id="silverModal">
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>Event Discounts</li>
+                <li>Spotlight Advertising</li>
+                <li>Priority Listing</li>
+            </ul>
+            <button class="close-modal" data-modal="silverModal">Close</button>
+        </dialog>
+        <dialog id="goldModal">
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver Benefits</li>
+                <li>Premium Advertising</li>
+                <li>Exclusive Networking</li>
+            </ul>
+            <button class="close-modal" data-modal="goldModal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 💥Carlos Serra💥</p>
+        <p id="lastModified"> Carlos Serra, Brazil</p>
+    </footer>
+
+</body>
+
+</html>
