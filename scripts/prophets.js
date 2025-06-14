@@ -3,8 +3,8 @@ const cards = document.querySelector('#cards');
 
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
+        
         //HTML
-
         let card = document.createElement('section');
         let fullName = document.createElement('h1');
         let portrait = document.createElement('img');

@@ -6,19 +6,18 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
 });
 
 
-//create new data object
+//DATA AND TIME ==========================
 const today = new Date();
 
-//select the document in HTML 
 const year = document.querySelector("#currentYear");
-//put the new object data into current year 
 year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-
 //last modified
 let lastModified = document.querySelector("#lastModified");
 lastModified.innerHTML = `<span class="highlight"> Last Modified: ${document.lastModified}</span>`;
 
-//list select 
+
+
+//list select  =================================================
 const courseList = document.getElementById("courseList");
 const totalCreditsElement = document.getElementById("total-credits");
 
@@ -40,24 +39,40 @@ function renderCourses(courseArray) {
 
         totalCreditsElement.innerHTML = `<strong>Total Credits:</strong> ${totalCredits}`;
     });
-
 }
-
 
 // Filter handlers
 document.getElementById('filter-all').addEventListener('click', () => {
     renderCourses(courses);
 });
-
 document.getElementById('filter-cse').addEventListener('click', () => {
     const cseCourses = courses.filter(course => course.subject === 'CSE');
     renderCourses(cseCourses);
 });
-
 document.getElementById('filter-wdd').addEventListener('click', () => {
     const wddCourses = courses.filter(course => course.subject === 'WDD');
     renderCourses(wddCourses);
 });
+
+// MODAL CREATION ==========================================
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
 
 
 const courses = [
