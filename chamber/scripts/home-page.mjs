@@ -105,7 +105,7 @@ function formatTime(unixTime) {
 // -------------------------------
 export async function getCompanies() {
     const spotContainer = document.querySelector('#spotlight-container');
-    
+
     try {
         const response = await fetch('./data/members.json');
         const data = await response.json();
@@ -175,7 +175,6 @@ function displayCompanies(companies, spotContainer) {
         card.classList.add('spotlight');
         card.appendChild(header);
         card.appendChild(body);
-
         spotContainer.appendChild(card);
     });
 }
