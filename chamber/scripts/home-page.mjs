@@ -55,10 +55,6 @@ export async function fetchForecast() {
 // Display Functions
 // -------------------------------
 function displayResults(data) {
-    if (!currentTemp || !currentHum || !highT || !lowT || !currentSunrise || !currentSunset || !weatherIcon || !captionDesc) {
-        console.warn("Um ou mais elementos de clima não foram encontrados.");
-        return;
-    }
 
     currentTemp.innerHTML = `<strong>${data.main.temp}&deg;C</strong>`;
     currentHum.innerHTML = `<strong>Humidity:</strong> ${data.main.humidity}%`;
@@ -77,10 +73,6 @@ function displayResults(data) {
 
 function displayForecast(data) {
     const forecastContainer = document.querySelector('#forecast');
-    if (!forecastContainer) {
-        console.warn("Forecast container not found");
-        return;
-    }
 
     forecastContainer.innerHTML = '';
 
@@ -113,10 +105,6 @@ function formatTime(unixTime) {
 // -------------------------------
 export async function getCompanies() {
     const spotContainer = document.querySelector('#spotlight-container');
-    if (!spotContainer) {
-        console.warn("Spotlight container not found");
-        return;
-    }
 
     try {
         const response = await fetch('./data/members.json');
