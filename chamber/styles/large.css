@@ -1,8 +1,6 @@
 :root {
     --primary-color: #780000;
     --secondary-color: #FDF0D5;
-    --third-color: #003049;
-    --sub-secondary: #669BBC;
     --font: "Lexend", sans-serif;
 }
 
@@ -38,8 +36,7 @@ footer {
 }
 
 /*navigation =================*/
-
-#hamButton {
+#hamButton{
     display: none;
 }
 
@@ -70,7 +67,7 @@ nav a:hover {
 
 }
 
-/* Directory ================*/
+/* Directory ====================================================================*/
 
 .menu {
     display: flex;
@@ -169,7 +166,7 @@ nav a:hover {
 
 }
 
-/*Home Page ==================*/
+/*Home Page ==================================================================*/
 
 .hero {
     position: relative;
@@ -219,12 +216,12 @@ nav a:hover {
 
 #current section {
     border: 1px solid #ccc;
- 
+
     display: block;
     padding: 15px;
-   
+
     background-color: #e0e0e0;
-  
+
 }
 
 #current section h2 {
@@ -291,7 +288,7 @@ nav a:hover {
     max-width: 90%;
 }
 
-/*WEATHER =======================*/
+/*WEATHER =======================================================*/
 .weather p {
     padding: 4px;
     text-align: start;
@@ -318,7 +315,7 @@ nav a:hover {
     margin: 10px;
 }
 
-/*==================================== JOIN PAGE =============================================*/
+/*JOIN PAGE =============================================*/
 
 .membership-card {
     opacity: 0;
@@ -334,7 +331,8 @@ nav a:hover {
 }
 
 /* Global Styles */
-body {
+.join-page body,
+.join-page {
     font-family: 'Lexend', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -342,11 +340,12 @@ body {
     color: #333;
 }
 
-main {
+.join-page main {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 1rem;
 }
+
 
 /* Form Styling */
 form {
@@ -442,25 +441,31 @@ input[type="submit"]:hover {
 
 /* Dialogs */
 dialog {
-  position: fixed; /* Fixa o modal na tela */
-  top: 50%; /* Coloca o modal no meio da tela verticalmente */
-  left: 50%; /* Coloca o modal no meio da tela horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
-  width: 80%; /* Largura do modal */
-  max-width: 500px; /* Largura máxima do modal */
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    /* Fixa o modal na tela */
+    top: 50%;
+    /* Coloca o modal no meio da tela verticalmente */
+    left: 50%;
+    /* Coloca o modal no meio da tela horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta a posição para centralizar */
+    width: 80%;
+    /* Largura do modal */
+    max-width: 500px;
+    /* Largura máxima do modal */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-dialog li{
+dialog li {
     padding: 5px;
-    
+
 }
 
 dialog h2 {
-    
+
     margin-top: 0;
 }
 
@@ -477,9 +482,57 @@ dialog button:hover {
     background-color: #bbb;
 }
 
+/*DISCOVER PAGE =========================================*/
 
 
-/*FOOTER CONTENT */
+/*VOCE PRECISA CRIAR SMALL, MEDIUM E LARGE VIEW PARA CADA UM DOS CARDS
+E USAR O GRID AREA*/
+@media screen and (min-width: 1025px) {
+    
+    
+    .places-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .places-grid div {
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .places-grid img {
+        border-radius: 10px;
+    }
+
+    
+
+}
+
+.btn-learnM {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        margin-top: 20px;
+    }
+
+.side-bar{
+    margin: 15px;
+    color: var(--primary-color);
+    font-size: 30px;
+   
+}
+
+
+
+/*FOOTER CONTENT =======================================================================*/
 footer {
     display: grid;
     justify-content: center;

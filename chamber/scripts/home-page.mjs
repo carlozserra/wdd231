@@ -22,9 +22,6 @@ const currentHum = document.querySelector('#current-humidity');
 const currentSunrise = document.querySelector('#current-sunrise');
 const currentSunset = document.querySelector('#current-sunset');
 
-// DOM Element for forecast
-const forecastContainer = document.querySelector('#forecast');
-
 // -------------------------------
 // API Fetch Functions
 // -------------------------------
@@ -47,7 +44,10 @@ export async function fetchForecast() {
         displayForecast(data);
     } catch (error) {
         console.error("Forecast error:", error);
-        forecastContainer.innerHTML = "Unable to load forecast.";
+        const forecastContainer = document.querySelector('#forecast');
+        if (forecastContainer) {
+            forecastContainer.innerHTML = "Unable to load forecast.";
+        }
     }
 }
 
@@ -55,6 +55,11 @@ export async function fetchForecast() {
 // Display Functions
 // -------------------------------
 function displayResults(data) {
+    if (!currentTemp || !currentHum || !highT || !lowT || !currentSunrise || !currentSunset || !weatherIcon || !captionDesc) {
+        console.warn("Um ou mais elementos de clima não foram encontrados.");
+        return;
+    }
+
     currentTemp.innerHTML = `<strong>${data.main.temp}&deg;C</strong>`;
     currentHum.innerHTML = `<strong>Humidity:</strong> ${data.main.humidity}%`;
     highT.innerHTML = `<strong>High:</strong> ${data.main.temp_max}&deg;C`;
@@ -71,6 +76,12 @@ function displayResults(data) {
 }
 
 function displayForecast(data) {
+    const forecastContainer = document.querySelector('#forecast');
+    if (!forecastContainer) {
+        console.warn("Forecast container not found");
+        return;
+    }
+
     forecastContainer.innerHTML = '';
 
     for (let i = 0; i < 3; i++) {
@@ -93,15 +104,20 @@ function formatTime(unixTime) {
     });
 }
 
-// -------------------------------
-// DOM Selector
-// -------------------------------
-const spotContainer = document.querySelector('#spotlight-container');
+// ==================================================
+// SPOTLIGHT COMPANIES MODULE
+// ==================================================
 
 // -------------------------------
-// Fetch and Filter Company Data
+// Load and Display Companies
 // -------------------------------
 export async function getCompanies() {
+    const spotContainer = document.querySelector('#spotlight-container');
+    if (!spotContainer) {
+        console.warn("Spotlight container not found");
+        return;
+    }
+
     try {
         const response = await fetch('./data/members.json');
         const data = await response.json();
@@ -111,32 +127,26 @@ export async function getCompanies() {
             company.memberLevel === "gold" || company.memberLevel === "silver"
         );
 
+        // Shuffle and select 3 random companies
         const selected = filtered.sort(() => Math.random() - 0.5).slice(0, 3);
 
-        displayCompanies(selected);
+        displayCompanies(selected, spotContainer);
     } catch (error) {
         console.error("Error loading companies:", error);
         spotContainer.innerHTML = "Unable to load spotlights.";
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    getCompanies();
-    apiFetch();
-    fetchForecast();
-});
-
 // -------------------------------
 // Render Company Cards
 // -------------------------------
-function displayCompanies(companies) {
+function displayCompanies(companies, spotContainer) {
     companies.forEach(company => {
         const card = document.createElement('section');
         const header = document.createElement('div');
         const body = document.createElement('div');
         const info = document.createElement('div');
 
-        // Header with name and tagline
         const businessName = document.createElement('h2');
         businessName.textContent = company.name;
 
@@ -147,7 +157,6 @@ function displayCompanies(companies) {
         header.appendChild(tag);
         header.classList.add('spotlight-header');
 
-        // Image
         const image = document.createElement('img');
         image.setAttribute('src', company.img);
         image.setAttribute('alt', `${company.name}`);
@@ -155,7 +164,6 @@ function displayCompanies(companies) {
         image.setAttribute('width', '100');
         image.setAttribute('height', '100');
 
-        // Info block with phone, link, and membership
         const phone = document.createElement('p');
         phone.textContent = company.phoneNumber;
 

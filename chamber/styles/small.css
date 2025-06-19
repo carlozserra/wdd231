@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) and (min-width: 320px) {
+@media screen and (max-width: 640px) {
 
     /* já existente para o botão hamburger */
     #hamButton::before {
@@ -10,7 +10,7 @@
     }
 
     #hamButton {
-        display: flex;
+        display: flex !important;
         position: absolute;
         right: 10px;
         font-size: 2rem;
@@ -20,30 +20,28 @@
         cursor: pointer;
     }
 
-
-
-    /*NAVIGATION =========================*/
+    /* NAVIGATION ========================= */
     nav {
         display: grid;
         grid-template-rows: 0fr;
         transition: grid-template-rows 0.5s ease-out;
-        
-    }
-    nav ul {
-        overflow: hidden;
-        display: block;
-    
-    }
-    nav.open {
-    
-        grid-template-rows: 1fr;
     }
 
+    nav ul {
+        overflow: hidden;
+        display: block !important;
+
+    }
+
+    nav.open {
+
+        grid-template-rows: 1fr;
+
+    }
 
     /* Home Page ======================= */
     .hero img {
         height: auto;
-        /* altura flexível no mobile */
     }
 
     .hero {
@@ -73,7 +71,6 @@
     /* SPOTLIGHTS ======================= */
     .spotlight-container {
         grid-template-columns: 1fr;
-        /* stack em vez de 3 colunas */
     }
 
     .spotlight-body {
@@ -108,4 +105,43 @@
         font-size: 1.2rem;
         margin: 5px 10px;
     }
+
+    /* DISCOVER PAGE =====================*/
+    .places-grid {
+        margin: 10px;
+    }
+
+    .places-grid div {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        grid-template-areas:
+            "image"
+            "name"
+            "address"
+            "description";
+    }
+
+    .places-grid h2 {
+        grid-area: name;
+        padding: 10px;
+    }
+
+    .places-grid p {
+        padding: 10px;
+        grid-area: description;
+    }
+
+    .places-grid address {
+        padding: 10px;
+        grid-area: address;
+    }
+
+    .places-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        grid-area: image;
+    }
+
+    
 }
