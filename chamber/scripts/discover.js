@@ -1,42 +1,43 @@
 import { places } from '../data/places.mjs';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const showHere = document.querySelector("#allplaces");
+  const showHere = document.querySelector("#allplaces");
 
-    function displayItens(places) {
-        places.forEach(x => {
-            let theCard = document.createElement('div');
-            let name = document.createElement('h2');
-            let address = document.createElement('p');
-            let description = document.createElement('p');
-            let image = document.createElement('img');
-            let buttonLearnMore = document.createElement('button');
+  function displayItens(places) {
+    places.forEach(x => {
+      let theCard = document.createElement('div');
+      let name = document.createElement('h2');
+      let address = document.createElement('p');
+      let description = document.createElement('p');
+      let image = document.createElement('img');
+      let buttonLearnMore = document.createElement('button');
 
-            buttonLearnMore.textContent = "Learn More";
-            buttonLearnMore.className = "btn-learnM";
+      buttonLearnMore.textContent = "Learn More";
+      buttonLearnMore.className = "btn-learnM";
 
-            name.textContent = `${x.name}`;
-            address.textContent = `${x.address}`;
-            description.textContent = `${x.description}`;
+      name.textContent = `${x.name}`;
+      address.textContent = `${x.address}`;
+      description.textContent = `${x.description}`;
 
-            image.setAttribute('alt', `${x.name}`);
-            image.setAttribute('src', `images/${x.image}`);
-            image.setAttribute('width', `300`);
-            image.setAttribute('height', `200`);
+      image.setAttribute('alt', `${x.name}`);
+      image.setAttribute('src', `images/${x.image}`);
+      image.setAttribute('width', `300`);
+      image.setAttribute('loading', 'lazy');
+      image.setAttribute('height', `200`);
 
-            theCard.appendChild(image);
-            theCard.appendChild(name);
-            theCard.appendChild(address);
-            theCard.appendChild(description);
-            theCard.appendChild(buttonLearnMore);
-            showHere.appendChild(theCard);
+      theCard.appendChild(image);
+      theCard.appendChild(name);
+      theCard.appendChild(address);
+      theCard.appendChild(description);
+      theCard.appendChild(buttonLearnMore);
+      showHere.appendChild(theCard);
 
-        });
+    });
 
-        console.log(places);
-    }
+    console.log(places);
+  }
 
-    displayItens(places);   
+  displayItens(places);
 });
 
 // Função exportada para verificar e mostrar mensagem de última visita
