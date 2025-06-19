@@ -93,10 +93,6 @@ function formatTime(unixTime) {
     });
 }
 
-// ==================================================
-// SPOTLIGHT COMPANIES MODULE
-// ==================================================
-
 // -------------------------------
 // DOM Selector
 // -------------------------------
@@ -115,7 +111,6 @@ export async function getCompanies() {
             company.memberLevel === "gold" || company.memberLevel === "silver"
         );
 
-        // Shuffle and select 3 random companies
         const selected = filtered.sort(() => Math.random() - 0.5).slice(0, 3);
 
         displayCompanies(selected);
@@ -124,6 +119,12 @@ export async function getCompanies() {
         spotContainer.innerHTML = "Unable to load spotlights.";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    getCompanies();
+    apiFetch();
+    fetchForecast();
+});
 
 // -------------------------------
 // Render Company Cards
