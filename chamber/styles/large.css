@@ -102,69 +102,66 @@ nav a:hover {
     width: 75%;
     margin: auto;
     padding: 20px;
-
-    img {
-        width: 30%;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-
-    }
-
-    h1 {
-        margin: 10px;
-        text-align: center;
-        color: var(--primary-color);
-    }
-
-    p {
-        margin: 0;
-        text-align: center;
-        color: rgb(0, 0, 0);
-        padding: 1px;
-    }
-
-    a {
-        display: flex;
-        justify-content: center;
-    }
-
-    section {
-        background-color: var(--secondary-color);
-        padding: 20px;
-        margin: 10px;
-        box-shadow: 0 1px 10px -1px;
-
-    }
 }
+
+.grid img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.grid h1 {
+    margin: 10px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.grid p {
+    margin: 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 1px;
+}
+
+.grid a {
+    display: flex;
+    justify-content: center;
+}
+
+.grid section {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 1px 10px -1px;
+}
+
 
 .list {
     display: flex;
     flex-direction: column;
     margin: 3rem;
-
-    section {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        padding: 0.25rem;
-
-        h1 {
-            padding: 4px;
-            color: var(--primary-color);
-        }
-
-        img {
-            display: none;
-        }
-
-        &:nth-child(odd) {
-            background-color: var(--secondary-color);
-        }
-
-
-    }
-
 }
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 0.25rem;
+}
+
+.list section h1 {
+    padding: 4px;
+    color: var(--primary-color);
+}
+
+.list section img {
+    display: none;
+}
+
+.list section:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
+
 
 /*Home Page ==================================================================*/
 
