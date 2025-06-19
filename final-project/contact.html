@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Graphic Design | Contact</title>
+  <meta name="description" content="Get in touch with Carlos Henrique for design services." />
+  <meta name="author" content="Carlos Henrique" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="images/favicon.ico" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menuBtn" aria-label="Toggle menu">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Me</h1>
+    <p class="subtitle">Let’s bring your ideas to life</p>
+  </header>
+  <main>
+    <form action="thankyou.html" method="get">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Carlos Henrique</p>
+    <a href="attributions.html">Attributions</a>
+  </footer>
+  <script src="scripts/form.js"></script>
+</body>
+</html>

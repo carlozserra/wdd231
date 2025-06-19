@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Logo Design",
+    "description": "Custom logos tailored to your brand's identity.",
+    "image": "images/logo-design.jpg",
+    "tools": [
+      "Illustrator",
+      "Affinity Designer",
+      "Figma"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Visual Identity",
+    "description": "Brand identity kits including typography, colors, and style guides.",
+    "image": "images/visual-identity.jpg",
+    "tools": [
+      "Photoshop",
+      "InDesign"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Advertising Materials",
+    "description": "Flyers, brochures, banners, and digital ads.",
+    "image": "images/advertising.jpg",
+    "tools": [
+      "Canva",
+      "CorelDRAW"
+    ]
+  }
+]

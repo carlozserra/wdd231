@@ -1,0 +1,197 @@
+:root {
+  --primary: #00296b;
+  --secondary: #ffd500;
+  --third: #ffffff;
+  --dark: #222;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Helvetica', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 4rem;
+  color: var(--dark);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.1)),
+    url('/wdd231/final-project/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+header {
+  display: flex;
+  color: var(--third);
+
+}
+
+/*navigation ================================*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+nav ul {
+  list-style: none;
+
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--third);
+  text-decoration: none;
+}
+
+/*hamburger btton ------*/
+#menuBtn {
+  font-size: 2rem;
+  background: none;
+  color: var(--third);
+  border: none;
+  cursor: pointer;
+  justify-content: end;
+
+}
+
+/*subititle*/
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/*button "view my work" =================*/
+.cta {
+  border: solid var(--third);
+  color: var(--third);
+  background: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta:hover {
+  color: var(--dark);
+  background: var(--third);
+}
+
+
+/*MAIN =====introduction after call to action button*/
+.intro {
+  text-align: center;
+  padding: 2rem;
+}
+
+/*services section ========*/
+
+.services {
+  display: grid;
+  grid-template-areas:
+    "h2"
+    "card1"
+    "card2"
+    "card3";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cardInfo1 {
+  grid-area: card1;
+}
+
+.cardInfo2 {
+  grid-area: card2;
+}
+
+.cardInfo3 {
+  grid-area: card3;
+}
+
+/* Estilo comum às 3 */
+.services>div {
+  background-color: #00296b80;
+  padding: 1rem;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Tamanho padrão para todas as imagens */
+.services img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.services h2 {
+  color: var(--third);
+  text-align: center;
+}
+
+/*about me section =============== */
+.aboutMe {
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "image text";
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: -2rem;
+  max-width: 1000px;
+  margin: 2rem;
+  background-color: #00296b80;
+  ;
+  color: white;
+  border-radius: 12px;
+}
+
+.aboutMe h2 {
+  grid-area: title;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.aboutMe img {
+  grid-area: image;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.aboutMe p {
+  grid-area: text;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/*FOOTER ===========================*/
+footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--primary);
+  color: var(--third);
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex !important;
+  }
+}

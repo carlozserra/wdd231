@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <meta name="description" content="Thank you for contacting Carlos Henrique." />
+  <meta name="author" content="Carlos Henrique" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <main style="text-align:center; padding:2rem;">
+    <h1>Thank You!</h1>
+    <p>Thank you, <span id="userName">Friend</span>, for reaching out. I will contact you soon!</p>
+  </main>
+  <script>
+    const name = localStorage.getItem('userName');
+    if (name) {
+      document.getElementById('userName').textContent = name;
+    }
+  </script>
+</body>
+</html>
