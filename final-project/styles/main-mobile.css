@@ -1,0 +1,55 @@
+@media screen and (max-width: 800px) {
+
+
+  header {
+    display: block;
+
+  }
+
+  #menuBtn {
+
+    display: block;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    font-size: 44px;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    
+  }
+
+  #menuBtn::before {
+    content: "\2630";
+  }
+
+  #menuBtn.open::before {
+    content: "X";
+  }
+
+  nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+  }
+
+  nav ul {
+    background-color: #00296b70;
+    overflow: hidden;
+    display: block;
+    margin-top: 2rem;
+  }
+
+  nav.open {
+
+    grid-template-rows: 1fr;
+  }
+
+  nav li {
+    
+    text-align: center;
+    padding: 1rem;
+  }
+
+}

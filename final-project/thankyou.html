@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,17 +8,38 @@
   <meta name="description" content="Thank you for contacting Carlos Henrique." />
   <meta name="author" content="Carlos Henrique" />
   <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main-mobile.css" />
+  <!-- META TAG-->
+<meta property="og:title" content="Creative Graphic Design" />
+<meta property="og:description" content="Professional visual identity, logo creation, and advertising design services." />
+<meta property="og:image" content="https://computhink.com/wp-content/uploads/2014/11/design_image.jpg" />
+<meta property="og:url" content="https://carlozserra.github.io/wdd231/final-project/contact.html" />
+
+
 </head>
+<header>
+  <div class="logo">
+    <img src="images/logo-design.png" alt="logo" width="40px" height="auto">
+    <h1>Creative Graphic Design</h1>
+    <button id="menuBtn"></button>
+  </div>
+
+  <nav id="animated">
+    <ul>
+      <li><a href="final-project.html">Home</a></li>
+      <li><a href="portifolio.html">Portifolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 <body>
-  <main style="text-align:center; padding:2rem;">
+  <main id="contactM">
     <h1>Thank You!</h1>
     <p>Thank you, <span id="userName">Friend</span>, for reaching out. I will contact you soon!</p>
   </main>
-  <script>
-    const name = localStorage.getItem('userName');
-    if (name) {
-      document.getElementById('userName').textContent = name;
-    }
-  </script>
+
+<script type="module" src="scripts/main.mjs"></script>
 </body>
+
 </html>

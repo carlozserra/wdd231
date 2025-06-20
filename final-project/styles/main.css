@@ -68,8 +68,15 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  color: var(--secondary);
+}
+
 /*hamburger btton ------*/
 
+#menuBtn {
+  display: none;
+}
 
 main h1 {
   margin-top: 10rem;
@@ -86,23 +93,30 @@ main p {
 
 /*button "Get a Qoute" =================*/
 .cta {
-  border: solid var(--third);
-  color: var(--third);
-  background: none;
+  border: none;
   font-size: 1rem;
-  font-weight: bold;
+  padding: 1rem;
   cursor: pointer;
+  border-radius: 1rem;
+  color: var(--dark);
+  background: var(--third);
+
+
 }
 
 .cta:hover {
-  color: var(--dark);
-  background: var(--third);
+  background-color: var(--secondary);
+  color: var(--third);
+
 }
+
+
 
 
 /*MAIN =====introduction after call to action button*/
 .intro {
   text-align: center;
+
 }
 
 /*services section ========*/
@@ -189,6 +203,64 @@ main p {
   font-size: 1rem;
 }
 
+/*portifolio =======================*/
+
+dialog {
+  border: none;
+  border-radius: 10px;
+}
+
+dialog button:hover {
+  cursor: pointer;
+  background-color: var(--secondary);
+}
+
+dialog button {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--third);
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.cards img {
+  cursor: pointer;
+}
+
+/*contact page ============== */
+
+form {
+  display: grid;
+  background-color: #00296b80;
+  border-radius: 1rem;
+  color: var(--third);
+  padding: 1rem;
+  width: 500px;
+  height: auto;
+  margin: 0 auto 70px;
+
+}
+
+label {
+  padding: 0.2rem;
+
+}
+
+#submit:hover {
+  background-color: var(--secondary);
+  color: var(--third);
+}
+
+#submit {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+/*thankyou ==========================*/
+
 
 /*FOOTER ===========================*/
 footer {
@@ -197,9 +269,3 @@ footer {
   background: #00296b80;
   color: var(--third);
 }
-
-@media screen and(max-width: 870px) {
-
- 
-  }
-
