@@ -85,5 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // last modification footer ============
 
-document.querySelector('#year').textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+document.addEventListener("DOMContentLoaded", () => {
+  const year = document.getElementById("currentYear");
+  const modified = document.getElementById("lastModified");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  if (modified) {
+    modified.textContent = document.lastModified;
+  }
+});
+
