@@ -1,5 +1,7 @@
 import { projects } from "../data/projects.mjs";
 
+
+//hamburger =============
 const hamburgerButton = document.querySelector('#menuBtn');
 const navElement = document.querySelector('#animated');
 
@@ -7,10 +9,8 @@ hamburgerButton.addEventListener('click', () => {
   navElement.classList.toggle('open');
   hamburgerButton.classList.toggle('open');
 });
-
+//cards portfolio ===========================
 document.addEventListener("DOMContentLoaded", async () => {
-
-  document.querySelector('#year').textContent = new Date().getFullYear();
 
   const container = document.querySelector("#portifolio");
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading projects:", err);
   }
 });
-
+// dialogs in portifolio =========================
 function openModal(item) {
   const modal = document.createElement('dialog');
 
@@ -71,8 +71,19 @@ function openModal(item) {
   document.body.appendChild(modal);
   modal.showModal();
 }
+
 /*contact.html ==========*/
-const name = localStorage.getItem('userName');
-    if (name) {
-      document.getElementById('userName').textContent = name;
+document.addEventListener("DOMContentLoaded", () => {
+  const name = localStorage.getItem('userName');
+  if (name) {
+    const userNameElement = document.getElementById('userName');
+    if (userNameElement) {
+      userNameElement.textContent = name;
     }
+  }
+});
+
+// last modification footer ============
+
+document.querySelector('#year').textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

@@ -52,4 +52,12 @@
     padding: 1rem;
   }
 
+
+ footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  display: grid;
+  font-size: 14px;
+  justify-content: center;
+}
 }
