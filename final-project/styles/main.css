@@ -9,71 +9,86 @@
 
 body {
   font-family: var(--font-body);
-  margin: 0;
-  padding: 4rem;
+  margin: 25px;
+  padding: 1rem;
   color: var(--dark);
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1.1)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.1)),
     url('/wdd231/final-project/images/background.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 
 }
 
-header {
-  display: flex;
-  color: var(--third);
-
-}
 
 /*navigation ================================*/
-nav {
+header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrp;
+  /* garante responsividade */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.logo {
+  display: grid;
+  grid-template-columns: 65px auto;
+  grid-template-rows: 40px;
+  align-items: center;
+  color: var(--third);
+}
+
+
+.logo p {
+
+  margin-left: 65px;
+  white-space: nowrap;
+}
+
+nav {
+  grid-template-columns: 1fr;
+  background-color: var(--secondary-color);
 
 }
 
 nav ul {
+  display: flex;
+  gap: 2rem;
   list-style: none;
-
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: var(--third);
+nav a {
   text-decoration: none;
+  color: var(--third);
+  font-weight: bold;
 }
 
 /*hamburger btton ------*/
-#menuBtn {
-  font-size: 2rem;
-  background: none;
+
+
+main h1 {
+  margin-top: 10rem;
+  text-align: center;
   color: var(--third);
-  border: none;
-  cursor: pointer;
-  justify-content: end;
-
 }
 
-/*subititle*/
-.subtitle {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+main p {
+  text-align: center;
+  color: var(--third);
 }
 
-/*button "view my work" =================*/
+
+
+/*button "Get a Qoute" =================*/
 .cta {
   border: solid var(--third);
   color: var(--third);
   background: none;
-  padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -88,11 +103,9 @@ nav ul li a {
 /*MAIN =====introduction after call to action button*/
 .intro {
   text-align: center;
-  padding: 2rem;
 }
 
 /*services section ========*/
-
 .services {
   display: grid;
   grid-template-areas:
@@ -131,7 +144,7 @@ nav ul li a {
 /* Tamanho padrão para todas as imagens */
 .services img {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
@@ -148,14 +161,9 @@ nav ul li a {
   grid-template-areas:
     "image title"
     "image text";
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  gap: 1.5rem;
-  padding: -2rem;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 2rem;
   background-color: #00296b80;
-  ;
   color: white;
   border-radius: 12px;
 }
@@ -163,13 +171,13 @@ nav ul li a {
 .aboutMe h2 {
   grid-area: title;
   text-align: center;
-  font-size: 2rem;
+
 }
 
 .aboutMe img {
+  display: block;
   grid-area: image;
   width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -177,8 +185,8 @@ nav ul li a {
 
 .aboutMe p {
   grid-area: text;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  margin: 10px;
+  font-size: 1rem;
 }
 
 
@@ -186,12 +194,12 @@ nav ul li a {
 footer {
   text-align: center;
   padding: 10px;
-  background: var(--primary);
+  background: #00296b80;
   color: var(--third);
 }
 
-@media screen and (min-width: 768px) {
-  nav ul {
-    display: flex !important;
+@media screen and(max-width: 870px) {
+
+ 
   }
-}
+
